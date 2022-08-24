@@ -114,7 +114,7 @@ class TextInputOutlined extends React.Component<ChildTextInputProps> {
       outlineColor = isTransparent ? customOutlineColor : colors.disabled;
     } else {
       inputTextColor = colors.text;
-      activeColor = error ? colors.error : activeOutlineColor || colors.primary;
+      activeColor = error ? colors.error : colors.primary;
       placeholderColor = colors.placeholder;
       outlineColor = customOutlineColor || colors.placeholder;
       errorColor = colors.error;
@@ -295,7 +295,7 @@ class TextInputOutlined extends React.Component<ChildTextInputProps> {
           theme={theme}
           hasActiveOutline={hasActiveOutline}
           focused={parentState.focused}
-          activeColor={activeColor}
+          activeColor={activeOutlineColor || activeColor}
           outlineColor={outlineColor}
           backgroundColor={backgroundColor}
         />
